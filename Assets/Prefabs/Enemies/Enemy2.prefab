@@ -184,10 +184,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92bd847dc30504846a0b9c1df823679a, type: 3}
+  m_Script: {fileID: 11500000, guid: d570f4e34c515c148bdec42ab711b421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 20
+  score: 15
 --- !u!114 &1254700727773306588
 MonoBehaviour:
   m_ObjectHideFlags: 0

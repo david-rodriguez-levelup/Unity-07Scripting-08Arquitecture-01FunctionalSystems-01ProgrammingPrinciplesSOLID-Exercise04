@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5518651615466695224, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
+      propertyPath: uiText
+      value: 
+      objectReference: {fileID: 2061881194}
+    - target: {fileID: -5518651615466695224, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 2061881194}
+    - target: {fileID: -5518651615466695224, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
+      propertyPath: scoreField
+      value: 
+      objectReference: {fileID: 2061881194}
     - target: {fileID: 2171460309015369795, guid: 2974dae006d74894a9cbe0e691abd7bd, type: 3}
       propertyPath: scoreText
       value: 
@@ -271,32 +283,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &890112811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 110440, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}
-  m_PrefabInstance: {fileID: 8334544140264430348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &890112815 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2539673780924698984, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}
   m_PrefabInstance: {fileID: 8334544140264430348}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890112811}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf06cae0a2a99614799f5d1af943f583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &890112816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890112811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d53d6a2750f5e9479d299ebf3a186eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1199150312 stripped
@@ -756,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 439242, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.01
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 439242, guid: c9816fa979b06ba4e9c222b529370cc2, type: 3}
       propertyPath: m_LocalPosition.z

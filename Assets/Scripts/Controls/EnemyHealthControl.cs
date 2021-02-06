@@ -2,21 +2,21 @@
 
 [RequireComponent(typeof(IHealthStateDecrementable))]
 [RequireComponent(typeof(DamageSourceSensor))]
-[RequireComponent(typeof(ScoreEmitAction))]
+[RequireComponent(typeof(ScoreEmitterAction))]
 [RequireComponent(typeof(DefaultSpawnAction))]
 public class EnemyHealthControl : MonoBehaviour
 {
 
     private IHealthStateDecrementable healthState;
     private DamageSourceSensor damageSourceSensor;
-    private ScoreEmitAction scoreEmitAction;
+    private ScoreEmitterAction scoreEmitterAction;
     private DefaultSpawnAction explosionSpawnAction;
 
     private void Awake()
     {
         healthState = GetComponent<IHealthStateDecrementable>();
         damageSourceSensor = GetComponent<DamageSourceSensor>();
-        scoreEmitAction = GetComponent<ScoreEmitAction>();
+        scoreEmitterAction = GetComponent<ScoreEmitterAction>();
         explosionSpawnAction = GetComponent<DefaultSpawnAction>();
     }
 
@@ -40,7 +40,7 @@ public class EnemyHealthControl : MonoBehaviour
     private void Explode()
     {
         explosionSpawnAction.Spawn();
-        scoreEmitAction.EmitScore();
+        scoreEmitterAction.Emit();
         Destroy(gameObject);
     }
 

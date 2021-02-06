@@ -1,20 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class LevelUIControl : MonoBehaviour
+public class LevelUIHealthControl : MonoBehaviour
 {
     [SerializeField] HealthState playerHealthState;
-
-    [SerializeField] Text scoreText;
     [SerializeField] RectMask2D healthBar;
-
-    private int score;
-
-    private void Start()
-    {
-        score = 0;
-        scoreText.text = score.ToString();
-    }
 
     private void OnEnable()
     {
@@ -26,18 +16,6 @@ public class LevelUIControl : MonoBehaviour
     {
         playerHealthState.OnHealthIncreased -= IncreaseHealthBar;
         playerHealthState.OnHealthDecreased -= DecreaseHealthBar;
-    }
-
-    public void SubscribeToScoreEmitAction(ScoreEmitAction scoreEmitAction)
-    {
-        // DOUBT: Is desubscription needed if score emitter (enemy) will be destroyed for sure?
-        scoreEmitAction.OnScoreEmitted += RefreshScore;
-    }
-
-    private void RefreshScore(int _score)
-    {
-        score += _score;
-        scoreText.text = score.ToString();
     }
 
     private void IncreaseHealthBar(float amount)

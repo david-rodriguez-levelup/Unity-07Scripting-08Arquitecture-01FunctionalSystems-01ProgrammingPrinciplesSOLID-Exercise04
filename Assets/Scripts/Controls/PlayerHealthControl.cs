@@ -39,19 +39,17 @@ public class PlayerHealthControl : MonoBehaviour
 
     private void OnDamageDetected(float amount)
     {
-        if (healthState.TryDecreaseHealth(amount))
+        if (healthState.TryDecreaseHealth(amount)) // Otra opción sería subscribirse a healthState.OnHealthDecreased.
         {
-            damageEffect.Play(); // Otra opción sería subscribirse a healthState.OnHealthDecreased.
-Debug.Log("--------------- DamageEffect.IsPlaying: " + damageEffect.isPlaying);
+            damageEffect.Play();
         }
     }
 
     private void OnHealingDetected(float amount)
     {
-        if (healthState.TryIncreaseHealth(amount))
+        if (healthState.TryIncreaseHealth(amount)) // Otra opción sería subscribirse a healthState.OnHealthIncreased.
         {
-            healingEffect.Play(); // Otra opción sería subscribirse a healthState.OnHealthIncreased.            
-Debug.Log("--------------- HealingEffect.IsPlaying: " + healingEffect.isPlaying);
+            healingEffect.Play();
         }
     }
 

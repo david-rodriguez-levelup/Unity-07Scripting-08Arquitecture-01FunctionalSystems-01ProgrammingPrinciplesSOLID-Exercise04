@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(ScoreReceiverSensor))]
+[RequireComponent(typeof(BoxShapedRandomSpawnAction))]
 public class LevelSpawnControl : MonoBehaviour
 {
 
@@ -10,12 +12,12 @@ public class LevelSpawnControl : MonoBehaviour
     [SerializeField] private GameObject powerUpPrefab;
     [SerializeField] private float timeBetweenPowerUps;
 
-    private LevelUIControl levelUIControl;
+    private ScoreReceiverSensor scoreReceiverSensor;
     private BoxShapedRandomSpawnAction spawnAction;
 
     private void Awake()
     {
-        levelUIControl = GetComponent<LevelUIControl>();
+        scoreReceiverSensor = GetComponent<ScoreReceiverSensor>();
         spawnAction = GetComponentInChildren<BoxShapedRandomSpawnAction>();
     }
 
@@ -33,14 +35,15 @@ public class LevelSpawnControl : MonoBehaviour
             GameObject enemy = spawnAction.Spawn(enemyPrefabs[random]);
             enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y, 0f);
 
-            ScoreEmitAction scoreEmitAction = enemy.GetComponent<ScoreEmitAction>();
-            if (scoreEmitAction != null)
+            ScoreEmitterAction scoreEmitterAction = enemy.GetComponent<ScoreEmitterAction>();
+            if (scoreEmitterAction != null)
             {
-                levelUIControl.SubscribeToScoreEmitAction(scoreEmitAction);
+                // Open/Close!
+                // If new components attached to the level have to listen to score emitter in the future,
+                // we don't have to change anything here.
+                // This new objects attached to the level will simply subscribe to the ScoreReceiverSensor.
+                scoreEmitterAction.SetReceiver(scoreReceiverSensor);
             }
-
-            // TODO: Registrarse al evento OnDestroy de cada enemigo!!!
-
 
             yield return new WaitForSeconds(timeBetweenEnemies);
         }

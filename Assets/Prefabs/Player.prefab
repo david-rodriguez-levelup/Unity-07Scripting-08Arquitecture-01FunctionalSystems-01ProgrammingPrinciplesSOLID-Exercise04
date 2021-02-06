@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageEffect: {fileID: 1985263608335497657}
-  healingEffect: {fileID: 19800012, guid: 552d94570f8ac344ea34ae6b62954657, type: 3}
+  healingEffect: {fileID: 1294076405050069574}
 --- !u!114 &2539673780924698984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +355,11 @@ PrefabInstance:
 --- !u!4 &1294076405030672134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400012, guid: 552d94570f8ac344ea34ae6b62954657, type: 3}
+  m_PrefabInstance: {fileID: 1294076405031062922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1294076405050069574 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800012, guid: 552d94570f8ac344ea34ae6b62954657, type: 3}
   m_PrefabInstance: {fileID: 1294076405031062922}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1985263608354236021
