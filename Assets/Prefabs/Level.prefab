@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 299985417776690051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77ba322fa41ebd54d8eba8482b61659d, type: 3}
+  m_Script: {fileID: 11500000, guid: a5f88e4565a68914891dfd23b59f59c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &358408949645366397
@@ -111,6 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5811962143037409045}
   - component: {fileID: 4803253534874587454}
+  - component: {fileID: 2171460309015369795}
   - component: {fileID: 5811962143037409050}
   - component: {fileID: 5811962143037409051}
   m_Layer: 0
@@ -153,7 +154,24 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 178266, guid: 28d007e82316709418a48ce0dccdf165, type: 3}
   - {fileID: 178266, guid: e299412adeffb274983d199b552d1980, type: 3}
-  timeBetweenEnemies: 5
+  timeBetweenEnemies: 3
+  powerUpPrefab: {fileID: 1277740577462374, guid: a6b1f17e641a4bb438a914af97581e3e, type: 3}
+  timeBetweenPowerUps: 5
+--- !u!114 &2171460309015369795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811962143037409048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e781bb9fb03a51f46ae69c024777905f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthState: {fileID: 0}
+  scoreText: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!33 &5811962143037409050
 MeshFilter:
   m_ObjectHideFlags: 0

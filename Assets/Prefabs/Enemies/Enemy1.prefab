@@ -90,11 +90,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432640}
-  - component: {fileID: 342612717072699229}
-  - component: {fileID: 8239439645266900159}
-  - component: {fileID: -1529726952637471545}
+  - component: {fileID: -5738708924109788596}
+  - component: {fileID: -3115320108757922153}
   - component: {fileID: -4315323856373929443}
-  - component: {fileID: 6089117121340439706}
+  - component: {fileID: -1319643383640910349}
+  - component: {fileID: -2149530428064421034}
+  - component: {fileID: 2112397342768907982}
+  - component: {fileID: -1529726952637471545}
   - component: {fileID: 2088763984801315247}
   - component: {fileID: 8826228217712027461}
   - component: {fileID: 3173040048564773064}
@@ -121,7 +123,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &342612717072699229
+--- !u!114 &-5738708924109788596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,11 +132,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73ba77d68ba484f49b796a9e4d8aa6e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 9adac9007f353c84187a106b23243839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
---- !u!114 &8239439645266900159
+  direction: {x: 0, y: -1, z: 0}
+  speed: 3
+--- !u!114 &-3115320108757922153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,25 +146,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d3b1fb60b7a98458c480812ffa673c, type: 3}
+  m_Script: {fileID: 11500000, guid: fc075a212aa2cd646989e8a3c313a488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-1529726952637471545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685ad2d431587dd4986935bfbf0cc804, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &-4315323856373929443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
---- !u!114 &6089117121340439706
+--- !u!114 &-1319643383640910349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,10 +171,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 178266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a9890fd8f2beae4c8e6abcfa8e0dccc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3feec67645678e846a65c6680b7b3db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageRatio: 1
+--- !u!114 &-2149530428064421034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bd847dc30504846a0b9c1df823679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
+--- !u!114 &2112397342768907982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be57d64e27126149a962a00a059643f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultPrefab: {fileID: 100012, guid: 160925a6fe2664f2a978566b819f0af0, type: 3}
+--- !u!114 &-1529726952637471545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ff42e84b1f15d4fa82039b2dbf57d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
 --- !u!114 &2088763984801315247
 MonoBehaviour:
   m_ObjectHideFlags: 0
